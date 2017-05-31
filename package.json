@@ -6,8 +6,10 @@
   "private": false,
   "author": "Vinit Kumar <vinit.kumar@changer.nl> (http://vinitkumar.me)",
   "scripts": {
-    "start": "node server.js",
-    "test": "make test"
+    "start": "node build & node server.js",
+    "test": "make test",
+    "merge": "echo TODO",
+    "deploy": "echo Deploy"
   },
   "engines": {
     "node": "7.6.0"
@@ -28,6 +30,7 @@
     "passport-google-oauth": "latest",
     "passport-local": "latest",
     "passport-twitter": "~1.0.2",
+    "progress": "^2.0.0",
     "underscore": "latest",
     "view-helpers": "latest"
   },
