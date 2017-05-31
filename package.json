@@ -6,7 +6,7 @@
   "private": false,
   "author": "Vinit Kumar <vinit.kumar@changer.nl> (http://vinitkumar.me)",
   "scripts": {
-    "start": "node build & node server.js",
+    "start": "node build",
     "test": "make test",
     "merge": "echo TODO",
     "deploy": "echo Deployed"
@@ -16,12 +16,16 @@
   },
   "dependencies": {
     "async": "latest",
+    "body-parser": "^1.17.2",
     "connect-flash": "latest",
     "connect-mongo": "latest",
-    "express": "3.5.0",
+    "cookie-parser": "^1.4.3",
+    "express": "4",
+    "express-session": "^1.15.3",
     "forever": "latest",
     "jade": "latest",
     "mongoose": "latest",
+    "morgan": "^1.8.2",
     "node-fetch": "^1.7.0",
     "notifier": "latest",
     "passport": "^0.3.2",
