@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block content
+  form(name="input", action="users", method="post")
+    | Username:
+    input(type="text", name="username")
+
+    | Email:
+    input(type="text", name="email")
+
+    | Password:
+    input(type="text", name="password")
+
+    input(type="submit", value="Submit")

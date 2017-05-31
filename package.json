@@ -9,7 +9,7 @@
     "start": "node build & node server.js",
     "test": "make test",
     "merge": "echo TODO",
-    "deploy": "echo Deploy"
+    "deploy": "echo Deployed"
   },
   "engines": {
     "node": "7.6.0"
