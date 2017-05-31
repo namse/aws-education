@@ -18,7 +18,6 @@
     "connect-mongo": "latest",
     "express": "3.5.0",
     "forever": "latest",
-    "gzippo": "latest",
     "jade": "latest",
     "mongoose": "latest",
     "notifier": "latest",

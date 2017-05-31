@@ -1,8 +1,3 @@
-let async = require('async');
-
-
-
-
 module.exports = (app, passport, auth) => {
   const users = require('../app/controllers/users');
   app.get('/login', users.login);
@@ -26,14 +21,14 @@ module.exports = (app, passport, auth) => {
   /**
    * API related code
    */
-    const apiv1 = require('../app/controllers/apiv1');
+  const apiv1 = require('../app/controllers/apiv1');
   app.get('/apiv1/tweets', apiv1.tweetList);
   app.get('/apiv1/users', apiv1.usersList);
 
   /**
   * Analytics related code
   */
-    const analytics = require('../app/controllers/analytics');
+  const analytics = require('../app/controllers/analytics');
   app.get('/analytics', analytics.index);
 
   app.param('userId', users.user);
