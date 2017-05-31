@@ -22,6 +22,7 @@
     "forever": "latest",
     "jade": "latest",
     "mongoose": "latest",
+    "node-fetch": "^1.7.0",
     "notifier": "latest",
     "passport": "^0.3.2",
     "passport-facebook": "latest",

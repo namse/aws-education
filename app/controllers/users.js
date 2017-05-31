@@ -1,29 +1,7 @@
 const Mongoose = require('mongoose');
 const Tweet = Mongoose.model('Tweet');
 const User = Mongoose.model('User');
-const Analytics = Mongoose.model('Analytics');
-
-/**
- * logAnalytics - Gets all the request and feeds to our analytics
- * system
- *
- * @param  {type} req Request
- */
-function logAnalytics(req) {
-  const url = req.protocol + '://' + req.get('host') + req.originalUrl;
-  const analytics = new Analytics(
-    {
-        ip: req.ip,
-        user: req.user,
-        url: url
-    }
-  );
-  analytics.save(err => {
-    if (err) {
-      console.log(err);
-    }
-  });
-}
+const logAnalytics = require('../../lib/logAnalytics');
 
 exports.signin = (req, res) => {};
 

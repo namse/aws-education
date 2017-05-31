@@ -1,29 +1,8 @@
 // ## Tweet Controller
 const mongoose = require('mongoose');
 const Tweet = mongoose.model('Tweet');
-const Analytics = mongoose.model('Analytics');
+const logAnalytics = require('../../lib/logAnalytics');
 const _ = require('underscore');
-
-function logAnalytics(req) {
-  const url = req.protocol + '://' + req.get('host') + req.originalUrl;
-  const crudeIpArray = req.ip.split(':');
-  const ipArrayLength = crudeIpArray.length;
-  // cleanup IP to remove unwanted characters
-  const cleanIp = crudeIpArray[ipArrayLength - 1];
-  if (req.get('host').split(':')[0] !== 'localhost') {
-    const analytics = new Analytics(
-        {
-        ip: cleanIp,
-        user: req.user,
-        url: url
-        });
-    analytics.save(err => {
-      if (err) {
-        console.log(err);
-      }
-    });
-  }
-}
 
 exports.tweet = (req, res, next, id) => {
   logAnalytics(req);
@@ -133,19 +112,14 @@ exports.index = (req, res) => {
       }
       let followingCount = req.user.following.length;
       let followerCount = req.user.followers.length;
-      Analytics.list({perPage: 15}, (err, analytics) => {
-        if (err) {
-          res.render('500');
-        }
-        res.render('tweets/index', {
-          title: 'List of Tweets',
-          tweets: tweets,
-          analytics: analytics,
-          page: page + 1,
-          pages: Math.ceil(count / perPage),
-          followerCount: followerCount,
-          followingCount: followingCount
-        });
+      res.render('tweets/index', {
+        title: 'List of Tweets',
+        tweets: tweets,
+//        analytics,
+        page: page + 1,
+        pages: Math.ceil(count / perPage),
+        followerCount: followerCount,
+        followingCount: followingCount
       });
     });
   });

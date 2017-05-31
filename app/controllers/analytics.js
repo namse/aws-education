@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Analytics = mongoose.model('Analytics');
 
 exports.index = (req, res) => {
   const page = (req.param('page') > 0 ? req.param('page') : 1) - 1;
