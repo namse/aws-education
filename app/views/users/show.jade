@@ -31,7 +31,7 @@ block content
             div.user-info
               a(href="#{user.github.html_url}", target='_blank') @#{user.github.login}
               ul.list-unstyled
-                li followers on github: #{user.github.followers}
+                li followers on github: #{user.followers}
                 li public repos: #{user.github.public_repos}
                 li ntwitter followers:
                   a(href="/users/" + user._id + "/followers") #{followerCount}

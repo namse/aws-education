@@ -41,7 +41,6 @@ exports.login = (req, res) => {
 exports.signup = (req, res) => {
   res.render('users/signup', {
     title: 'Sign up',
-    user: new User()
   });
 };
 
