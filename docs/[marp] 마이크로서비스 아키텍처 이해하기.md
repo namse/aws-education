@@ -250,7 +250,7 @@ TODO:
 ---
 
 https://www.slideshare.net/AmazonWebServices/introduction-to-microservices-74259780
-4~10페이지 -> 13페이지
+4~10페이지 -> 13 ~ 16페이지 -> 20 ~ 33페이지
 
 
 ---
@@ -279,14 +279,16 @@ https://www.slideshare.net/AmazonWebServices/introduction-to-microservices-74259
 - 분산 시스템
 - DB도 분리
   - 전사적 DB 정규화의 고정관념 탈피
-- 개발, 배포, 관리, 운영도 분산
 
+![center](https://martinfowler.com/articles/microservices/images/decentralised-data.png)
 
 ---
 
 # Independent
 
 - 수정, 변경, 교체에 있어 독립적
+
+![center](https://martinfowler.com/articles/microservices/images/micro-deployment.png)
 
 ---
 
@@ -324,7 +326,8 @@ https://www.slideshare.net/AmazonWebServices/introduction-to-microservices-74259
   - DevOps (Development + Operation)
 - 개발자가 유저와 가까울수록, 서비스 개선이 더 용이해진다.
 
-<span style="color:red">Q. 조직의 형태가 아키텍처에 중요하게 영향을 미칩니까?</span>
+<span style="color:red">Q1. 조직의 형태가 아키텍처에 중요하게 영향을 미칩니까?</span>
+<span style="color:red">Q2. 팀의 크기는 얼마정도가 적당합니까?</span>
 
 > ...Conway's Law...
 
@@ -630,6 +633,24 @@ https://www.slideshare.net/Byungwook/micro-service-architecture-52233912
 
 ---
 
+# Conway's Law의 예시
+## 단절된 팀구조는 단절된 아키텍처를
+
+![center](https://martinfowler.com/articles/microservices/images/conways-law.png)
+
+>https://martinfowler.com/articles/microservices
+
+---
+
+# Conway's Law의 예시
+## 상호작용하는 팀구조는 상호작용하는 아키텍처를
+
+![center](https://martinfowler.com/articles/microservices/images/PreferFunctionalStaffOrganization.png)
+
+>https://martinfowler.com/articles/microservices
+
+---
+
 # Fallacies of Distributed Computing
 
 - The network is reliable.
@@ -754,3 +775,36 @@ AWS 마저도 Microservices로 되어있음
 
 ---
 
+# 정리하면
+
+- Monolithic : 모여있음의 불편함
+- Microservices : 잘 나뉘어진 작은 서비스들의 상호작용
+- Conway's Law : 조직의 변화가 중요하다
+- Silver-Bullet이 아니지만, 현재 필요한 기술은 맞다
+- MSA의 도전과제를 해결하기 위해 노력해야 한다
+
+## AWS는 MSA를 잘 쓰게 도와준다 <br>= AWS를 잘 쓰려면 MSA를 잘 써야한다
+
+---
+
+# 복습용 자료
+
+- Martin Folwler's Microservices https://martinfowler.com/articles/microservices.html
+- AWS 백서 / Microservices on AWS https://d0.awsstatic.com/whitepapers/microservices-on-aws.pdf
+
+
+---
+
+# 다음으로 무엇을 공부하면 좋을까요?
+
+- Domain Driven Design
+- Continuous Integration & Deployment (CI/CD) / DevOps
+- Serverless Architecture
+- AWS Well-Architected Framework
+- Storage on AWS
+- EC2 T2 and Other Instance Families
+- Docker Conatiner
+- AWS Cloudformation
+- etc...
+
+---
