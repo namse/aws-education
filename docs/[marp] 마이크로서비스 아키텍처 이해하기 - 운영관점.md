@@ -1,5 +1,7 @@
 # 마이크로서비스 아키텍처 이해하기
 
+## - 운영의 입장에서 -
+
 클라우드 서비스팀 남세현
 
 ---
@@ -168,7 +170,15 @@ Computer Engineering에서는 흔한 문제 해결 방식
 
 ---
 
-Autonomy 추가
+![200% center](C:\Users\A41445\Downloads\introduction-to-microservices-14-638.jpg)
+
+---
+
+![200% center](C:\Users\A41445\Downloads\introduction-to-microservices-15-638%20(1).jpg)
+
+---
+
+![200% center](C:\Users\A41445\Downloads\introduction-to-microservices-16-638.jpg)
 
 ---
 
@@ -226,6 +236,7 @@ Autonomy 추가
 
 ### 설계] 비용, 기능 최적화 가능해요, 복잡하긴 해요
 
+### + 이렇게 안하면 큰 서비스 못해요
 ...
 
 ### <span style="color:red">운영] 일이 많아져요!!!</span>
@@ -387,7 +398,7 @@ etc...
 
 ---
 
-# 하지만 신경 쓰셔야 합니다.
+# 계속 신경 쓰셔야 합니다.
 
 - 테스트의 자동화
 - 배포 프로세스의 자동화
@@ -416,8 +427,9 @@ etc...
   - 코드 레벨뿐만 아니라
   - 조직 레벨에서부터 노력하는 중
 - 우리도 그런 정신이 필요하지 않은가?
-  - 변화하려는 마음도 좋지만 따라만 하는거 말고,
-  - 우리 조직의 문제점, 불편함을 해소하려는 의지와 용기가 우리에게 있는가?
+  - 변화하려는 마음도 좋지만 따라하는것을 넘어서,
+  - 우리 조직의 문제점과 불편함을 해소하려는 의지와 용기가 우리에게 있는가?
+  - 나는?
 
 ---
 
@@ -427,12 +439,100 @@ etc...
 
 > 조직 혁신은 관심 없으면서 남들의 새로운 아키텍처만 따라가다가는
 > 영원한 후발 주자가 될 수 밖에 없다.
-
+> 진정한 의미의 기술의 혁신이 있을 수 없다.
 
 ---
 
 ## 다시 Microservices로 돌아가서..
 
 # AWS와는 무슨 관계인가요?
+
+---
+
+# Amazon.com
+
+![200% center](C:\Users\A41445\Downloads\devops-in-amazoncom-7-638.jpg)
+
+---
+
+# AWS is Microservices Architecture
+
+![200% center](C:\Users\A41445\Downloads\aws-services-overview-september-2016-webinar-series-5-638.jpg)
+
+---
+
+# AWS가 MSA에 적합한 것은 우연이 아님
+
+> AWS has several characteristics that directly address the most important challenges of microservices architectures
+
+- On-demand resources
+- Experiment with low cost and risk
+- Programmability
+- Infrastructure as code
+- Continuous delivery
+- Managed services
+- Service orientation
+- Polyglot
+
+---
+
+# MSA를 써야 AWS를 제대로 쓴다
+
+- Monolithic은 애초에 한계가 있다
+  - Trade-off 감안?
+- Cost Optimization
+- 자동화의 세계에 옛날 방식으로 접근하지 마세요.
+
+---
+
+# 정리
+
+- Monolithic의 불편함 --> MSA로 해결
+- MSA도 불편함 있음 --> 여러 도구로 해결 (AWS, CI/CD)
+  - 가장 중요한 것은 조직 문화의 변화로 해결에 도전
+- MSA 잘 쓰려면 AWS, AWS 잘 쓰려면 MSA
+- 운영 작아지거나 흡수되거나 사라진다
+  - 자동화, 효율화, 조직의 변화
+- 새로운 인재상
+  - 개발 할 줄 아는 운영 (최소한 관심이라도)
+  - AWS 잘 알면 금상첨화
+
+---
+
+# 이제야 기술적인 이야기를 할 수 있습니다.
+
+- 처음부터 기술 얘기해봤자...
+  - '나랑 관계 없는 일인데?'
+- 하지만 지금은?
+  - '저걸 아는게 힘이구나'
+  - '저걸 왜 알아야 하는지 알겠다!'
+  - 동기부여는 최고로 중요
+
+---
+
+# 앞으로 할 교육들
+
+- 개발, 사업, 아키텍처링 관점의 MSA
+- Continuous Integration / Delivery
+- AWS Specific한 이야기들
+  - Storage의 종류와 특징들
+  - EC2 Instances
+- Well-Architected Framework
+- Domain Driven Design
+
+---
+
+# 앞으로 진행할 교육들
+
+> "언어(파이썬) 교육 받고 와도 다음 단계로 공부할 것 찾기가 어려워서 실력이 안늘어 업무에 사용할 자신이 없어요."
+
+- 실습 위주의 AWS 인프라 운용 교육 (코딩위주)
+  - Lambda, Cloudformation
+  - "이런 Architecture의 Cloudformation Template를 만드시오"
+  - "매일 05시에 EC2를 백업하는 자동화를 Lambda 코드를 이용하여 만드시오"
+  - 과제(숙제) -> 채점(피드백) -> 모범답안(강의)
+
+## 단계별 학습 + AWS 실습위주 = 업무 연관성 Up
+
 
 ---
